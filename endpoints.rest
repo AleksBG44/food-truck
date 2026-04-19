@@ -1,0 +1,35 @@
+### var
+@url = http://localhost:3000/api/v1
+
+@idMenu = 69e539c73cdc6a37cf8eea34
+
+@idEvent = 69e546bd52bb9e2e63c9741d
+
+### menu
+GET {{url}}/menu
+### by Id
+GET {{url}}/menu/{{idMenu}}
+### Add new menu item
+POST {{url}}/menu
+Content-Type: application/json
+
+{ 
+    "name": "Coffee2",
+    "description": "Cool",
+    "price": "20",
+    "url": "gsdgsd.com"
+}
+### events
+GET {{url}}/events
+### by Id
+GET {{url}}/events/{{idEvent}}
+### Add new event
+POST {{url}}/events
+Content-Type: application/json
+
+{ 
+    "name": "Event2",
+    "location": "Oshkosh",
+    "date": "4/20/2029",
+    "time": "3pm"
+}
