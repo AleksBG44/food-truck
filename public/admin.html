@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Eats Food Truck Admin</title>
+    <link rel="stylesheet" href="styles/food-truck.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/nav-logo-750x300.png" alt="Street Eats Logo"  class="navlogo"/></a>
+            <ul class="navmenu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="menu.html">MENU</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <div class="formscontent">
+
+        <!-- Menu Addition Form -->
+        <div class="form">
+            
+            <h2>Add a Menu Item</h2>
+
+            <form action="/submit" method="POST">
+                
+                <label for="image">Image URL:</label>
+                <input type="url" id="image" name="image" placeholder="https://example.com/image.jpg" required>
+                
+                <label for="menuname">Menu Item Name:</label>
+                <input type="text" id="menuname" name="menuname" required>
+
+                <label for="menudescription">Description:</label>
+                <input type="text" id="menudescription" name="menudescription" required>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" min="0" placeholder="$0.00" required>
+
+                <button type="submit">Submit</button>
+
+            </form>
+        </div>
+
+        <!-- Event Addition Form -->
+        <div class="form">
+            <h2>Add an Event</h2>
+
+            <form action="/submit" method="POST">
+                
+                <label for="name">Event Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="weekday">Weekday of Event:</label>
+                <input type="text" id="weekday" name="weekday" required>
+
+                <label for="date">Select a Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="streetaddress">Street Address:</label>
+                <input type="text" id="streetaddress" name="streetaddress" required>
+
+                <label for="citystate">City, State:</label>
+                <input type="text" id="citystate" name="citystate" placeholder="city, state (WI)"  required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </div>
+    
+    </div>
+
+
+    <footer>
+        <div class="footercityscape"></div>
+            
+        <div class="footernav">
+            <a href="index.html"><img src="img/footer-logo-500x200.jpg" alt="Street Eats Logo"/></a>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="menu.html">MENU</a></li>
+            </ul>
+        </div>
+
+        <div class="footercopyright">
+            <p class="copyright">&copy; Copyright 2026 - Street Eats Food Truck</p>
+            <a href="admin.html" class="admin">Admin</a>
+        </div>
+            
+    </footer>
+    
+</body>
+</html>

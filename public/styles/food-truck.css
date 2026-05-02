@@ -1,0 +1,411 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+:root{
+  --red:  rgb(227, 1, 1);
+  --black: #000000;
+  --white: #ffffff;
+  --ltgrey: #c9c9c9a7;
+  --placeholder: #b3b3b3a7;
+  --medgrey: rgb(138, 138, 138);
+  --dkgrey: rgb(101, 101, 101);
+  --sectgrey: #f7f7f7;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+h1{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+h2{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--black);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--red);
+    margin: 10px auto 0;
+}
+
+h3{
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--red);
+    margin: 0;
+}
+
+h4{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+p{
+    font-size: 1.4rem;
+    font-weight: 200;
+    margin: 0;
+    line-height: 1.5;
+}
+
+hr{
+    color:var(--ltgrey);
+    width: 90%;
+}
+
+/* Nav Container */
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 5px 80px 0px 30px;
+}
+
+.navlogo{
+    height: 120px;
+    width: auto;
+}
+
+.navmenu {
+    list-style: none;
+    display: flex;
+    gap: 65px;
+    margin: 0;
+    padding: 0;
+}
+
+.navmenu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.navmenu a:hover{
+    color: var(--red);
+}
+
+
+/* Banner */
+.banner{
+    display: flex;
+    background-color: var(--black);
+}
+
+#banner-text{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.banner img{
+    height: 500px;
+    width: auto;
+    margin-left: auto;
+}
+
+
+/* Menu Section */
+#menucontainer{
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding-bottom: 70px;
+}
+
+#menucontainer h2{
+    text-align: center;
+    margin-top: 80px;
+}
+
+#menugrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.menuitem img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.menuname{
+    margin-top: 10px;
+}
+    
+.menudescr{
+    font-size: 1.1rem;
+}
+
+.menuprice{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+/* Events Section */
+#eventscontainer h2{
+    text-align: center;
+}
+
+.eventscontent {
+    display: flex;
+    gap: 20px;
+    padding: 20px 140px;
+    align-items: flex-start;
+}
+
+#eventscontainer img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+#eventscontainer {
+    background-color: var(--sectgrey);
+    padding: 30px 0;
+}
+
+#eventtextcontainer {
+    flex: 1;
+}
+
+.eventtext{
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
+.eventtext p{
+    font-weight: 500;
+}
+
+
+
+
+/* Menu Detail Page */
+.menucontent {
+    display: flex;
+    justify-content: center;
+}
+
+.menudetail {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    margin-top: 40px;
+    line-height: 1.2;
+}
+
+.menudetail img{
+    width: 40%;
+    height: auto;
+}
+
+.menudetail h3{
+    font-size: 1.9rem;
+}
+
+.menudetail p{
+    font-size: 1.4rem;
+}
+
+.menudetail h4{
+    font-size: 1.4rem;
+}
+
+
+/* Event Detail Page */
+.eventcontent {
+    text-align: center;
+}
+
+.eventdetail {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.namedetail{
+    color: var(--red);
+    margin-bottom: 15px;
+}
+
+.namedetail h3{
+    font-size: 1.8rem;
+}
+
+
+.datedetail p,
+.datedetail h4,
+.locationdetail p,
+.locationdetail h4 {
+    margin: 0;
+}
+
+.datedetail h4{
+    margin-bottom: 30px;
+}
+
+
+/* Admin Page */
+.formscontent {
+    display: flex;
+    gap: 60px;
+    padding: 40px 80px;
+}
+
+.form {
+    flex: 1;
+    border: solid 2px rgb(138, 138, 138);
+    padding: 35px;
+}
+
+.form h2{
+    margin-top: 0;
+}
+
+.form h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--red);
+  margin: 10px 0;
+}
+
+label{
+    font-size: 1.3rem;
+    display: block;
+    padding-bottom: 10px;
+}
+
+input{
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+}
+
+input::placeholder{
+    font-size: 1.3rem;
+    color: var(--placeholder);
+}
+
+input[type="date"]:invalid,
+input[type="time"]:invalid {
+    color: var(--placeholder);
+    font-size: 1.3rem;
+}
+
+input[type="date"]:valid,
+input[type="time"]:valid {
+    color: var(--black);
+    font-size: 1.3rem;
+}
+
+button{
+    padding: 15px;
+    background-color: var(--sectgrey);
+    font-size: 1.3rem;
+    width: 30%;
+    border-radius: 15px;
+}
+
+button:hover{
+    background-color: var(--ltgrey);
+    font-weight: 500;
+}
+
+
+/* Footer Container */
+footer {
+    display: block;
+    padding: 5px 80px 20px 30px;
+}
+
+.footercityscape {
+    width: 100%;
+    height: 80px;
+    margin-top: 80px;
+
+    background-image: url("../img/cityscape-light-1920x350.png");
+    background-repeat: repeat-x;
+
+    background-size: auto 80px;
+    background-position: bottom left;
+}
+
+.footernav{
+    display: flex;
+    align-items: center;
+}
+
+.footernav img{
+    height: 100px;
+    width: auto;
+}
+
+.footernav ul{
+    list-style: none;
+    display: flex;
+    gap: 45px;
+    margin-left: auto;
+    padding: 0;
+}
+
+.footernav a {
+    text-decoration: none;
+    color: var(--dkgrey);
+}
+
+.footernav a:hover{
+    color: var(--red);
+}
+
+.footercopyright{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.copyright{
+    font-size: 1rem;
+    color:var(--medgrey);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.admin{
+    font-size: 1rem;
+    color: var(--medgrey);
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.admin:hover{
+    color: var(--red);
+}
+
+
