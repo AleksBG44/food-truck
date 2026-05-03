@@ -34,7 +34,7 @@ h2{
     color: var(--black);
 }
 
-h2::after {
+.redlineh2::after {
     content: "";
     display: block;
     width: 60px;
@@ -141,6 +141,11 @@ nav {
     gap: 30px;
 }
 
+.menuitem a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .menuitem img{
     width: 100%;
     height: auto;
@@ -165,6 +170,10 @@ nav {
 
 
 /* Events Section */
+.eventitem {
+    margin-bottom: 25px;
+}
+
 #eventscontainer h2{
     text-align: center;
 }
@@ -192,14 +201,25 @@ nav {
     flex: 1;
 }
 
+#eventlist {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .eventtext{
     padding-left: 60px;
     padding-top: 20px;
-}
-
-.eventtext p{
     font-weight: 500;
 }
+.eventtext a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* .eventtext p{
+    font-weight: 500;
+} */
 
 
 
@@ -207,31 +227,32 @@ nav {
 /* Menu Detail Page */
 .menucontent {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.menudetail {
+#menudetail {
     width: 100%;
     max-width: 900px;
     text-align: center;
-    margin-top: 40px;
     line-height: 1.2;
 }
 
-.menudetail img{
+#menudetail img{
     width: 40%;
     height: auto;
+    margin-top: 20px;
 }
 
-.menudetail h3{
+#menudetail h3{
     font-size: 1.9rem;
 }
 
-.menudetail p{
+#menudetail p{
     font-size: 1.4rem;
 }
 
-.menudetail h4{
+#menudetail h4{
     font-size: 1.4rem;
 }
 

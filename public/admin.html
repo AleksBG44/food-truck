@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street Eats Food Truck Admin</title>
     <link rel="stylesheet" href="styles/food-truck.css">
+    <script src="/scripts/site.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,9 +26,9 @@
         <!-- Menu Addition Form -->
         <div class="form">
             
-            <h2>Add a Menu Item</h2>
+            <h2 class="redlineh2">Add a Menu Item</h2>
 
-            <form action="/submit" method="POST">
+            <form id="menuForm">
                 
                 <label for="image">Image URL:</label>
                 <input type="url" id="image" name="image" placeholder="https://example.com/image.jpg" required>
@@ -48,27 +49,30 @@
 
         <!-- Event Addition Form -->
         <div class="form">
-            <h2>Add an Event</h2>
+            <h2 class="redlineh2">Add an Event</h2>
 
-            <form action="/submit" method="POST">
+            <form id="eventForm">
                 
-                <label for="name">Event Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="title">Event Name:</label>
+                <input type="text" id="title" name="title" required>
 
-                <label for="weekday">Weekday of Event:</label>
-                <input type="text" id="weekday" name="weekday" required>
+                <label for="day">Weekday of Event:</label>
+                <input type="text" id="day" name="day" required>
 
                 <label for="date">Select a Date:</label>
                 <input type="date" id="date" name="date" required>
 
-                <label for="streetaddress">Street Address:</label>
-                <input type="text" id="streetaddress" name="streetaddress" required>
+                <label for="address">Street Address:</label>
+                <input type="text" id="address" name="address" required>
 
-                <label for="citystate">City, State:</label>
-                <input type="text" id="citystate" name="citystate" placeholder="city, state (WI)"  required>
+                <label for="city">City, State:</label>
+                <input type="text" id="city" name="city" placeholder="city, state (WI)"  required>
 
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time" required>
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime" name="startTime" required>
+
+                <label for="endTime">End Time:</label>
+                <input type="time" id="endTime" name="endTime" required>
 
                 <button type="submit">Submit</button>
 

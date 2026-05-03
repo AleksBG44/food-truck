@@ -3,8 +3,10 @@ const { getCollection, ObjectId } = require('../../../dbconnect')
 
 let collection = null
 const getEvents = async () => {
-    if (!collection) collection = await getCollection('FoodTruckAPI', 'events')
-        return collection
+    if (!collection) {collection = await getCollection('foodtruckdb', 'events')
+    }
+        
+    return collection
 }   
 
 router.get('/:id', async (request, response) => {
@@ -23,11 +25,10 @@ router.get('/', async (request, response) => {
 })
 
 router.post("/", async (request, response) => {
-    const { name, location, date, time } = request.body
+    const { title, day, date, time, address, city } = request.body
     const collection = await getEvents()
-    const result = await collection.insertOne({ name, location, date, time })
-    const { acknowledged, insertedId } = result
-    response.send({ acknowledged, insertedId })
+    const result = await collection.insertOne({ title, day, date, time, address, city })
+    response.send(result)
 })
 
 
