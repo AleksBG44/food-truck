@@ -13,25 +13,25 @@
 
 
 
-const { MongoClient, ObjectId } = require("mongodb");
-const { uri } = require('./db/mongodb.json');
+const { MongoClient, ObjectId } = require("mongodb")
+const { uri } = require('./db/mongodb.json')
 
-const client = new MongoClient(uri);
+const client = new MongoClient(uri)
 
-let db;
+let db
 
 const connect = async () => {
     if (!db) {
-        await client.connect();
-        db = client.db("foodtruckdb");
-        console.log("Connected to MongoDB");
+        await client.connect()
+        db = client.db("foodtruckdb")
+        console.log("Connected to MongoDB")
     }
-    return db;
-};
+    return db
+}
 
 const getCollection = async (dbName, collectionName) => {
-    const db = await connect();
-    return db.collection(collectionName);
-};
+    const db = await connect()
+    return db.collection(collectionName)
+}
 
-module.exports = { getCollection, ObjectId };
+module.exports = { getCollection, ObjectId }
